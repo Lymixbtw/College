@@ -1,0 +1,118 @@
+import datetime
+print("#1")
+def sum(num1,num2):
+    return num1 + num2
+print(sum(3,6))
+print("#2")
+def sum_kvadratov(lst):
+    sum = 0
+    for i in lst:
+        sum += (i*i)
+    return sum
+lst = [2, 3,4,5]
+print(sum_kvadratov(lst))
+print("#3")
+def cub(num):
+    return num*num*num
+print(cub(3))
+print("#4")
+def func1(num1, num2, num3):
+	return (num1 + num2) * num3
+print(func1(num1 = 1, num2 = 2, num3 = 3))
+print("#5")
+tst1 = 2
+tst2 = 4
+tst3 = 6
+def sum_3x_chisel(x, y, z):
+     return x + y + z
+print(sum_3x_chisel(tst1, tst2, tst3))
+print("#6")
+def sqre(x):
+     return x*x
+def cub_sqre(x):
+     return cub(sqre(x))
+print(cub_sqre(3))
+print("#7")
+def proverka_na_stroku(x):
+     if type(x) == str:
+          return(x.title())
+x = str(input("Введите имя "))
+print(proverka_na_stroku(x))
+def privet_pol(x):
+     print("Привет", proverka_na_stroku(x))
+privet_pol(x)
+print("#8")
+name = input("Имя студента ")
+lastname = input("Фамилия студента ")
+curs = int(input("Курс "))
+def student_info(name, lastname, curs):
+     print(name.title())
+     print(lastname.upper())
+     print(curs)
+student_info(name, lastname, curs)
+print("#9")
+def S_pryam(x, y):
+     print(x * y)
+S_pryam(3, 12)
+print("#10")
+def stroka_to_cortez(stroka):
+     return tuple(stroka)
+stroka = "abcde"
+print(stroka_to_cortez(stroka))
+print("#11")
+def srav(x , y):
+     if x > y:
+          print(x, "Больше")
+     if x < y:
+          print(y, "Больше")
+     if x == y:
+          print("Равны")
+srav(3, 4)
+print("#12")
+def proverka_na_int(x):
+     if type(x) == int:
+          new_x= str(x)
+          return new_x
+x = 3
+x = proverka_na_int(x)
+if type(x) == str:
+     print("stroka")
+if type(x) == int:
+     print("int")
+print("#13")
+x = 5
+def zap_spisok(x):
+     lst = []
+     for i in range(1, x):
+          if i % 2 == 0:
+               lst.append(i)
+     print(lst)
+zap_spisok(x)
+print("#14")
+slov = {
+     'Андрей': 17,
+     'Алекс': 36,
+     'Федор': 25
+}
+def vivod_slovarya_v_cortez(slov):
+     return tuple(slov.items())
+print(vivod_slovarya_v_cortez(slov))
+print("#15")
+x = datetime.datetime.now()
+x = x.strftime('%w')
+def den_nedeli(x):
+     if x == 1:
+          print("Понедельник")
+     elif x == 2:
+          print("Вторник")
+     elif x == 3:
+          print("Среда")
+     elif x == 4:
+          print("Четверг")
+     elif x == 5:
+          print("Пятница")
+     elif x == 6:
+          print("Суббота")
+     elif x == 7:
+          print("Воскресенье")
+den_nedeli(int(x))
