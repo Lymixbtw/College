@@ -1,0 +1,118 @@
+print("Задание 1. Списки в Python")
+lst = ['ab', 'cd', 'ef']
+print(lst)
+print("Задание 2. Списки в Python")
+lst = [1, 2, 3, 4, 5]
+print(lst[0])
+print("Задание 3. Списки в Python")
+lst = ['a', 'b', 'c', 'd']
+print(len(lst))
+print("Задание 4. Списки в Python")
+lst = ['a', 'b', 'c', 'd']
+print(lst[-1])
+print("Задание 5. Списки в Python")
+lst1 = [1, 2, 3]
+lst2 = [4, 5, 6]
+lst1.extend(lst2)
+print(lst1)
+print('Задание 1. Срезы')
+txt = '12345'
+print(txt[1:4])
+print('Задание 2. Срезы')
+lst = [1, 2, 3, 4, 5, 6, 7]
+print(lst[1:4])
+print('Задание 3. Срезы')
+txt = '12345'
+print(txt[1:])
+print('Задание 4. Срезы')
+lst = ['a', 'b', 'c', 'd', 'e']
+print(lst[:2])
+print('Задание 5. Срезы')
+txt = '123456789'
+print(txt[4:-2])
+print('Задание 1. Кортежи')
+tst = '12345'
+tpl = tuple(tst)
+print(tpl)
+print('Задание 2. Кортежи')
+tpl = ('a', 'b', 3, 4, 'c')
+print(tpl[2])
+print('Задание 3. Кортежи')
+tpl = ('1', 'b', '3', 'd', '5')
+print(len(tpl))
+print('Задание 4. Кортежи')
+tpl1 = ('1', '2', '3')
+tpl2 = ('4', '5', '6')
+tpl3 = ('7', '8', '9')
+res = tpl1 + tpl2 + tpl3
+print(res)
+print('Задание 5. Кортежи')
+tpl1 = ('1', '2', '3')
+tpl2 = tpl1 * 3
+print(tpl2)
+print('Задание 1. Словари')
+dct = {
+	2: 'ab',
+	4: 'cd',
+	6: 'ef'
+}
+print(dct)
+print('Задание 2. Словари')
+dct = {
+	'x': 1,
+	'y': 2,
+	'z': 3
+}
+print(dct['x'], dct['y'], dct['z'])
+print('Задание 3. Словари')
+dct = {
+	'a': 5,
+	'b': 10,
+	'c': 15
+}
+print(dct['a'], dct['b'], dct['c'])
+print(dct['a'] + dct['b'] + dct['c'])
+print('Задание 4. Словари')
+dct = {
+	'x': 1,
+	'y': 2,
+	'z': 3
+}
+dct['x'] += 1
+print(dct)
+print('Задание 5. Словари')
+dct = {
+	'x': 1,
+	'y': 2,
+	'z': 3
+}
+dct['a'] = '!'
+dct['b'] = '@'
+dct['c'] = '#'
+print(dct)
+print('Задание 1. Множества')
+st = {'x', 1, 'y', 2, 'z', 3, 'w'}
+print(len(st))
+print('Задание 2. Множества')
+st = {1, 2, 3}
+st.add(4)
+txt1 = 'xyz'
+txt2 = 'xzy'
+txt3 = 'xyz'
+st.add(txt1)
+st.add(txt2)
+st.add(txt3)
+print(st)
+print('Задание 3. Множества')
+st = {'x', 'y', 'z', 'w'}
+st.update('abxcz')
+print(st)
+print('Задание 4. Множества')
+st1 = {'a', 'b', 'c', 'd', 'e'}
+st2 = {'d', 'e', 'f', 'g', 'h'}
+st3 = st1 | st2
+print(st3)
+print('Задание 5. Множества')
+st = {1, 2, 3, 4, 5}
+st.remove(3)
+print(st)
