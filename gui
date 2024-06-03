@@ -1,0 +1,45 @@
+from tkinter import * # подключение библиотеки tkinter
+import tkinter as tk
+from tkinter import ttk
+root = tk.Tk()     # создаем корневой объект - окно
+root.title("Мир")     # устанавливаем заголовок окна
+root.geometry("900x800+500+100")    # устанавливаем размеры окна
+def gettext():
+    label["text"] = Entr.get()
+def newprint(event=None):
+    print(Entr.get())
+def podschet():
+    text1 = text.get("1.0", "end-1c")
+    count = 1
+    count2 = 0
+    for i in text1:
+        if i == ' ':
+            count += 1
+        else:
+            count2 += 1
+    label1["text"] = count
+    label2["text"] = count2
+label = Label(text="Привет") # создаем текстовую метку
+label.pack()    # размещаем метку в окне
+root.configure(background='green')
+btn = ttk.Button(text="отправить", command=gettext) # создаем кнопку из пакета ttk
+btn.pack()    # размещаем кнопку в окне
+label = ttk.Label()
+label.pack()
+Entr = ttk.Entry()
+Entr.pack()
+text = Text(root)
+text.pack()
+label1 = ttk.Label()
+label1.pack(anchor="nw")
+label2 = ttk.Label()
+label2.pack(anchor="se")
+btn.bind("<Button-1>", newprint)
+btn2 = ttk.Button(text = "Посчитать кол-во слов", command=podschet)
+btn2.pack()
+verticalScale = ttk.Scale(orient=HORIZONTAL, length=200, from_=1.0, to=100.0, value=50)
+verticalScale.pack(anchor="ne")
+label3 = ttk.Label()
+label3.pack(anchor="ne")
+label3["text"] = "оцените от 1 до 100"
+root.mainloop()
